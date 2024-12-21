@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Pacifico&display=swap');
+
+:root {
+    --clr-white: #fff;
+    --clr-black: #000;
+    --clr-black-opaque: #0000008a;
+    --clr-indigo: #424669;
+    --clr-midnight-blue: #2D3250;
+    --clr-dark-blue: #161E31;
+    --clr-apricot: #F8B179;
+    --clr-dark-blue-gray: #252941;
+
+    --clr-red: #FF3C11;
+    --clr-red-opaque: #ff3d1133;
+    --clr-green: #00B212;
+    --clr-green-opaque: #00B21233;  
+}
+
+body {
+    background: var(--clr-dark-blue);
+    min-height: 100dvh;
+    margin: 0;  
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--clr-white);
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+h2 {
+    font-family: 'pacifico';
+    font-size: 30px;
+    font-weight: 500;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*----Clases----*/
+
+.center-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-elemet {
+    display: flex;
+}
+
+.hidden-element {
+    display: none;
+}
+
+/*----Barra de navegacion----*/
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    height: 78px;
+    background: var(--clr-midnight-blue);
+    padding: 0 20px 0 20px;
+    z-index: 1000;
+}
+
+.nav-container {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img-user > img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: var(--clr-white);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.img-user:hover::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 5%;
+    height: 50px;
+    background: var(--clr-indigo);
+    opacity: 50%;
+    z-index: 1;
+    cursor: pointer;
+    transition: background-color var(--clr-indigo) 5s ease;
+}
+
+.nav-burguer-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/*----Boton de camara----*/
+
+.btn-camera-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--clr-midnight-blue);
+    z-index: 500;
+}
+
+.btn-camera-container .img {
+    width: 50px;
+    height: 50px;
+    background: blue;
+}
+
+.btn-camera-container button {
+    width: 100%;
+    height: 100%;
+}
+
+/*----Carta de MiniTagram----*/
+
+.minitagram-card-container {
+    position: relative;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.minitagram-card {
+    position: relative;
+    width: 826px;
+    height: 70vh;
+    border-radius: 20px;
+    background: var(--clr-midnight-blue);
+    transition: transform 0.3s ease;
+}
+
+.minitagram-card:hover {
+    transform: scale(1.05);
+}
+
+.minitaram-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.minitaram-card-content > .minitagram-card-post-img, .minitagram-card-post-img > img {
+    border-radius: 0 20px 20px 0;
+    width: 498px;
+    height: 100%;
+    background: var(--clr-dark-blue-gray);
+}
+
+.user-information {
+    width: 276px;
+    margin: 20px;
+    padding: 30px;
+}
+
+.information {
+    position: relative;
+    height: 100%;
+}
+
+.information > strong,
+ .information > p,
+  .information > span,
+    .user > p,
+    .user > label {
+    max-width: 237px;
+    max-height: 231px;
+    color: var(--clr-white);
+    word-wrap: break-word; 
+    white-space: normal;   
+    font-family: 'Inder';
+}
+
+.information > span {
+    position: absolute;
+    bottom: 0;
+    font-size: 13px;
+    color: var(--clr-white);
+    opacity: 0.7;
+}
+
+.minitaram-card-content .center-elements {
+    flex-direction: column;
+    justify-content: start;
+}
+
+.user-information {
+    position: relative;
+    gap: 10px;
+}
+
+.user > .img-user > img {
+    width: 70px;
+    height: 70px;
+}
+
+.user-information > .user > .img-user:hover::before {
+    display: none;
+}
+
+/*----pagina sin cotenido----*/
+
+.not-post-founded {
+    width: 671px;
+    height: 100px;
+    font-size: 40px;
+    color: var(--clr-apricot);
+}
+
+/*----icons----*/
+
+.burger-menu img {
+    width: 40px;
+}
+
+.camera {
+    width: 50px;
+}
+
+.sad-face {
+    width: 44px;
+    height: 44px;
+}
+
+/*----Formulario nueva pulicacion----*/
+
+#minitagram-card-new-post {
+    position: relative;
+    top: 5%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.minitagram-card-img-title {
+    width: 234px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: var(--clr-dark-blue);
+}
+
+.minitagram-card-img-description-text, .minitagram-card-img-title {
+    font-family: 'Inder';
+    color: var(--clr-white);
+    padding: 0 10px 0 10px;
+}
+
+.minitagram-card-img-title::placeholder, .minitagram-card-img-description-tex::placeholder {
+    text-align: center;
+}
+
+.minitagram-card-img-description-text {
+    width: 100%;
+    height: 100%;
+    max-width: 207px;
+    max-height: 155px;
+    resize: none;
+    background: var(--clr-dark-blue);
+    border: none;
+    overflow-y: hidden;
+}
+
+.camera-iputs {
+    position: relative;
+    gap: 10px;
+}
+
+.btns-minitagram-card-new-post {
+    width: 500px;
+    justify-content: space-between;
+}
+
+.btn-camera-container-upload-img {
+    position: relative;
+    background: var(--clr-dark-blue-gray);
+    top: 40%;
+    z-index: 1000;
+}
+
+.btn-camera-container-upload-img > img {
+    position: relative;
+    top: 15%;
+}
+
+.minitagram-card-new-post-img {
+    cursor: pointer;
+}
+
+.minitagram-card-new-post-img:hover,
+ .minitagram-card-new-post-img:hover > .btn-camera-container-upload-img {
+    background: var(--clr-indigo); 
+}
+
+.minitagram-card-new-post-img > img {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease; 
+}
+
+.minitagram-card-new-post-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--clr-dark-blue); 
+    z-index: 2; 
+    transition: opacity 0.3s ease; 
+    opacity: 0; 
+}
+
+.minitagram-card-new-post-img:hover::before {
+    opacity: 0.5; 
+}
+
+.minitagram-card-new-post-img:hover::before > .btn-camera-container {
+    position: relative;
+    z-index: 1000;
+}
+
+.green-button, .red-button {
+    width: 180px;
+    height: 50px;
+    border: 3px;
+    border-radius: 20px;
+    font-family: 'Inder';
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.green-button {
+    border-style: solid;
+    border-color: var(--clr-green);
+    background: var(--clr-green-opaque);
+    color: var(--clr-green);
+}
+
+.red-button {
+    border-style: solid;
+    border-color: var(--clr-red);
+    background: var(--clr-red-opaque);
+    color: var(--clr-red);
+}

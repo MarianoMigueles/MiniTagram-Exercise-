@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "MiniTagram",
+    "short_name": "MiniGram",
+    "start_url": "/index.html",
+    "theme_color": "#2D3250",
+    "background_color": "#161E31",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "./assets/Logo/MiniTagram-Logo-50x50.png",
+        "sizes": "50x50"
+      },
+      {
+        "src": "./assets/Logo/MiniTagram-Logo-100x100.png",
+        "sizes": "100x100"
+      },
+      {
+        "src": "./assets/Logo/MiniTagram-Logo-192x192.png",  
+        "sizes": "192x192"
+      },
+      {
+        "src": "./assets/Logo/MiniTagram-Logo-512x512.png",  
+        "sizes": "512x512"
+      },
+      {
+        "src": "./assets/Logo/MiniTagram-Logo-144x144.png",  
+        "sizes": "144x144"
+      },
+      {
+        "src": "./assets/Logo/MiniTagram-Logo-64x64.png",  
+        "sizes": "64x64"
+      }
+    ]
+  }
